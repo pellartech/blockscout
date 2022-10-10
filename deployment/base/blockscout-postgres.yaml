@@ -1,0 +1,77 @@
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: blockscout-postgres
+  namespace: blockscout
+  labels:
+    app: blockscout-postgres
+spec:
+  selector:
+    app: blockscout-postgres
+  ports:
+  - protocol: TCP
+    port: 5432
+    targetPort: 5432
+---
+kind: PersistentVolumeClaim
+apiVersion: v1
+metadata:
+  name: data-blockscout-postgres
+  namespace: blockscout
+  labels:
+    app: blockscout-postgres
+  finalizers:
+    - kubernetes.io/pvc-protection
+spec:
+  accessModes:
+    - ReadWriteOnce
+  resources:
+    requests:
+      storage: 500Gi
+  storageClassName: gp2
+
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: blockscout-postgres
+  namespace: blockscout
+  labels:
+    app: blockscout-postgres
+spec:
+  replicas: 1
+  strategy:
+    type: Recreate
+  selector:
+    matchLabels:
+      app: blockscout-postgres
+  template:
+    metadata:
+      labels:
+        app: blockscout-postgres
+    spec:
+      containers:
+        - name: postgres
+          image: postgres:14
+          ports:
+            - containerPort: 5432
+          env:
+            - name: PGDATA
+              value: /var/lib/postgresql/data/pgdata
+            - name: POSTGRES_PASSWORD
+              value: blockscout
+          envFrom:
+            - configMapRef:
+                name: blockscout-postgres
+          volumeMounts:
+            - mountPath: /var/lib/postgresql/data
+              name: postgredb
+          resources:
+            limits:
+              memory: "1Gi"
+              cpu: "500m"
+      volumes:
+        - name: postgredb
+          persistentVolumeClaim:
+            claimName: data-blockscout-postgres
