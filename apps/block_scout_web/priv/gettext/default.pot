@@ -392,7 +392,7 @@ msgstr ""
 
 #: lib/block_scout_web/templates/layout/_footer.html.eex:41
 #, elixir-autogen, elixir-format
-msgid "Chat (#blockscout)"
+msgid "Mobile Wallet"
 msgstr ""
 
 #: lib/block_scout_web/views/block_view.ex:63
@@ -575,7 +575,7 @@ msgstr ""
 
 #: lib/block_scout_web/templates/layout/_footer.html.eex:40
 #, elixir-autogen, elixir-format
-msgid "Contribute"
+msgid "NFT Marketplace"
 msgstr ""
 
 #: lib/block_scout_web/templates/address_contract/index.html.eex:124
@@ -1042,7 +1042,7 @@ msgstr ""
 
 #: lib/block_scout_web/templates/layout/_footer.html.eex:42
 #, elixir-autogen, elixir-format
-msgid "Forum"
+msgid "Bridge"
 msgstr ""
 
 #: lib/block_scout_web/templates/address_internal_transaction/index.html.eex:38
@@ -1893,7 +1893,7 @@ msgstr ""
 
 #: lib/block_scout_web/templates/layout/_footer.html.eex:39
 #, elixir-autogen, elixir-format
-msgid "Submit an Issue"
+msgid "Project Website"
 msgstr ""
 
 #: lib/block_scout_web/templates/transaction/_emission_reward_tile.html.eex:8

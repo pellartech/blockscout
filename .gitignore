@@ -50,3 +50,5 @@ screenshots/
 *.iml
 
 .vscode
+deployment/base/blockscout.env
+deployment/base/postgres.env
