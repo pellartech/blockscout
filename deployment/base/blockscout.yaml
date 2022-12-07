@@ -42,11 +42,11 @@ spec:
         args: ["-c", "bin/blockscout eval \"Elixir.Explorer.ReleaseTasks.create_and_migrate()\" && bin/blockscout start"]
         env:
           - name: DATABASE_URL
-            value: postgresql://admin:blockscout@blockscout-postgres:5432/blockscout?ssl=false
+            value: postgresql://postgres:jbx6UTR5xpf6xat*wyq@prime-explorer-devnet.cluster-cjlhg5xsbzi7.ap-southeast-1.rds.amazonaws.com:5432/blockscout?ssl=false
         envFrom:
           - configMapRef:
               name: blockscout
         resources:
           limits:
-            memory: "1Gi"
-            cpu: "500m"
+            memory: "4Gi"
+            cpu: "1000m"

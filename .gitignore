@@ -52,3 +52,7 @@ screenshots/
 .vscode
 deployment/base/blockscout.env
 deployment/base/postgres.env
+codeql-analysis.yml
+config.yml
+publish-docker-image-every-push.yml
+publish-docker-image-release.yml
