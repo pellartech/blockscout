@@ -1,9 +1,9 @@
 <% status = transaction_status(@transaction) %>
 <% error_in_internal_tx = @transaction.has_error_in_internal_txs %>
 <div class="tile tile-type-<%= type_suffix(@transaction) %> fade-in <%= status_class(@transaction) %>" data-test="<%= type_suffix(@transaction) %>" data-identifier-hash="<%= @transaction.hash %>">
-  <div class="row tile-body" data-selector="token-transfers-toggle" data-test="chain_transaction">
+  <div class="row tile-body aaaaaa" data-selector="token-transfers-toggle" data-test="chain_transaction">
     <!-- Color Block -->
-    <div class="tile-transaction-type-block col-md-2 d-flex flex-row flex-md-column">
+    <div class="tile-transaction-type-block col-md-2 d-flex flex-row flex-md-column tile-tx">
       <div>
         <%= if error_in_internal_tx do %>
           <%= render BlockScoutWeb.CommonComponentsView, "_i_tooltip_2.html", text: gettext("Error in internal transactions"), additional_classes: ["color-inherit"] %>
@@ -23,9 +23,9 @@
       </span>
     </div>
     <!-- Content -->
-    <div class="col-md-7 col-lg-8 d-flex flex-column pr-2 pr-sm-2 pr-md-0">
+    <div class="col-md-7 col-lg-8 d-flex flex-column pr-2 pr-sm-2 pr-md-0 content-txs">
       <span>
-      <div class="text-truncate d-flex">
+      <div class="text-truncate d-flex align-items-center">
         <%= render "_link.html", transaction_hash: @transaction.hash, data_test: "address_hash_link" %>
         <% method_name = Transaction.get_method_name(@transaction) %>
         <%= if method_name do %>
@@ -35,14 +35,19 @@
       </span>
       <span>
         <%= @transaction |> BlockScoutWeb.AddressView.address_partial_selector(:from, assigns[:current_address]) |> BlockScoutWeb.RenderHelpers.render_partial() %>
-        &rarr;
+        <!-- &rarr; -->
+        &nbsp;
+        <svg width="16" height="8" viewBox="0 0 16 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M1 3.5C0.723858 3.5 0.5 3.72386 0.5 4C0.5 4.27614 0.723858 4.5 1 4.5V3.5ZM15.3536 4.35355C15.5488 4.15829 15.5488 3.84171 15.3536 3.64645L12.1716 0.464466C11.9763 0.269204 11.6597 0.269204 11.4645 0.464466C11.2692 0.659728 11.2692 0.976311 11.4645 1.17157L14.2929 4L11.4645 6.82843C11.2692 7.02369 11.2692 7.34027 11.4645 7.53553C11.6597 7.7308 11.9763 7.7308 12.1716 7.53553L15.3536 4.35355ZM1 4.5H15V3.5H1V4.5Z" fill="#00E7FF"/>
+        </svg>
+        &nbsp;
         <%= @transaction |> BlockScoutWeb.AddressView.address_partial_selector(:to, assigns[:current_address]) |> BlockScoutWeb.RenderHelpers.render_partial() %>
       </span>
       <span class="d-flex flex-md-row flex-column mt-3 mt-md-0">
         <span class="tile-title">
           <%= value(@transaction, include_label: false) %> <%= gettext "Ether" %>
         </span>
-        <span class="ml-0 ml-md-1 text-nowrap">
+        <span class="ml-0 ml-md-1 text-nowrap text-tx-fee">
           <%= formatted_fee(@transaction, denomination: :ether, include_label: false) %> <%= gettext "TX Fee" %>
         </span>
       </span>
@@ -71,10 +76,10 @@
     </div>
     <!-- Block info -->
     <div class="col-md-3 col-lg-2 d-flex flex-row flex-md-column flex-nowrap justify-content-center text-md-right mt-3 mt-md-0 tile-bottom">
-      <span class="mr-2 mr-md-0 order-1">
+      <span class="mr-2 mr-md-0 order-1 block-number">
         <%= @transaction |> block_number() |> BlockScoutWeb.RenderHelpers.render_partial() %>
       </span>
-      <span class="mr-2 mr-md-0 order-2" in-tile data-from-now="<%= block_timestamp(@transaction) %>"></span>
+      <span class="mr-2 mr-md-0 order-2 days-ago" in-tile data-from-now="<%= block_timestamp(@transaction) %>"></span>
       <%= if from_or_to_address?(@transaction, assigns[:current_address]) do %>
         <span class="mr-2 mr-md-0 order-0 order-md-3">
           <%= if @transaction.from_address_hash == assigns[:current_address].hash do %>

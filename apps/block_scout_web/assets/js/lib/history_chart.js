@@ -17,7 +17,7 @@ const grid = {
 }
 
 function getTxChartColor () {
-  if (localStorage.getItem('current-color-mode') === 'dark') {
+  if (localStorage.getItem('current-color-mode') === 'dark' || !localStorage.getItem('current-color-mode')) {
     return sassVariables.dashboardLineColorTransactionsDarkTheme
   } else {
     return sassVariables.dashboardLineColorTransactions
@@ -25,7 +25,7 @@ function getTxChartColor () {
 }
 
 function getPriceChartColor () {
-  if (localStorage.getItem('current-color-mode') === 'dark') {
+  if (localStorage.getItem('current-color-mode') === 'dark' || !localStorage.getItem('current-color-mode')) {
     return sassVariables.dashboardLineColorPriceDarkTheme
   } else {
     return sassVariables.dashboardLineColorPrice
@@ -33,7 +33,7 @@ function getPriceChartColor () {
 }
 
 function getMarketCapChartColor () {
-  if (localStorage.getItem('current-color-mode') === 'dark') {
+  if (localStorage.getItem('current-color-mode') === 'dark' || !localStorage.getItem('current-color-mode')) {
     return sassVariables.dashboardLineColorMarketDarkTheme
   } else {
     return sassVariables.dashboardLineColorMarket

@@ -2,12 +2,12 @@ $tile-type-block-color: $primary !default;
 $tile-type-uncle-color: $cyan !default;
 $tile-type-reorg-color: $purple !default;
 $tile-type-emission-reward-color: $lilac !default;
-$tile-type-transaction-color: $blue !default;
+$tile-type-transaction-color: #FFA869 !default;
 $tile-type-contract-call-color: $green !default;
 $tile-type-contract-creation-color: $dark-purple !default;
-$tile-type-token-transfer-color: $orange !default;
-$tile-type-unique-token-color: $orange !default;
-$tile-type-unique-token-image-color: $orange !default;
+$tile-type-token-transfer-color: $blue !default;
+$tile-type-unique-token-color: $blue !default;
+$tile-type-unique-token-image-color: $blue !default;
 $tile-type-internal-transaction-color: $teal !default;
 $tile-type-api-documentation-color: $primary !default;
 $tile-type-progress-bar-color: $primary !default;
@@ -19,7 +19,7 @@ $tile-body-a-color: #5959d8 !default;
 
 @mixin generate-tile-block($prefix, $color, $label-color: false) {
   &#{ $prefix } {
-    border-left: 4px solid $color;
+    border-left: 2px solid $color;
 
     .tile-transaction-type-block {
       a {
@@ -32,23 +32,32 @@ $tile-body-a-color: #5959d8 !default;
     }
 
     .tile-label {
+      font-size: 12px;
       @if ($label-color) {
         color: $label-color;
+        // color: #FFA869;
       } @else {
         color: $color;
+        // color: #FFA869;
       }
     }
 
     .tile-status-label {
+      // color: #FFA869;
       color: inherit;
+      margin-top: 3px;
+      font-weight: 400;
+      font-size: 12px;
+      line-height: 150%;
     }
 
     .tile-transaction-type-block {
-      background-color: rgba($color, 0.1);
-      border-bottom: 1px solid $color;
-      border-right: 1px solid $color;
-      border-top: 1px solid $color;
+      // background-color: rgba($color, 0.1);
+      // border-bottom: 1px solid $color;
+      // border-right: 1px solid $color;
+      // border-top: 1px solid $color;
       color: $color;
+      // color: #FFA869;
     }
   }
 }
@@ -56,10 +65,10 @@ $tile-body-a-color: #5959d8 !default;
 /*********************************************************************/
 
 .tile-label {
-  font-size: 12px;
-  font-weight: 700;
-  line-height: 1.2;
-  margin: 0 0 2px;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.5;
+  margin: 0 0 4px;
   text-align: center;
 
   &:last-child {
@@ -71,12 +80,18 @@ $tile-body-a-color: #5959d8 !default;
   }
 }
 
+.tile-tx {
+  bottom: -18px !important;
+  margin-top: -36px !important;
+  background-color: #2B272E;
+}
+
 .tile-transaction-type-block {
   align-items: center;
-  bottom: -17px;
+  bottom: -30px;
   justify-content: center;
-  margin-left: -1px;
-  margin-top: -34px;
+  margin-left: -9px;
+  margin-top: -60px;
   padding: 0 5px;
   position: relative;
 
@@ -86,9 +101,10 @@ $tile-body-a-color: #5959d8 !default;
     border: none !important;
     bottom: auto;
     flex-direction: column !important;
-    margin: 0 0 10px;
+    margin: 0 0 25px;
     padding-left: 1rem;
     top: auto;
+    padding-top: 1.125rem;
 
     .tile-status-label {
       margin-left: 0 !important;
@@ -114,6 +130,18 @@ $tile-body-a-color: #5959d8 !default;
   @media (max-width: 767px) {
     justify-content: flex-start !important;
   }
+
+  .days-ago {
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 150%;
+  }
+  .block-number {
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 150%;
+    margin-bottom: 4px;
+  }
 }
 
 .tile-bottom-contents {
@@ -124,12 +152,23 @@ $tile-body-a-color: #5959d8 !default;
 }
 
 .tile-transactions {
-  color: #a3a9b5;
-  font-size: 12px;
+  color: #757F8F;
   font-weight: 400;
-  line-height: 1.2;
-  margin-bottom: 10px;
+  font-size: 14px;
+  line-height: 150%;
   text-align: left;
+}
+
+.tile-block-demo {
+  font-size: 12px;
+  margin-bottom: 4px;
+}
+
+.text-miner-white {
+  color: #FFFFFF;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 150%;
 }
 
 .tile-badge {
@@ -176,6 +215,27 @@ $tile-body-a-color: #5959d8 !default;
 }
 
 .tile {
+  &.tile-type-transaction {
+    padding: 1.125rem 1.5rem;
+  }
+  &.tile-type-contract-call {
+    padding: 1.125rem 1.5rem;
+  }
+  &.tile-status--success {
+    padding: 1.125rem 1.5rem;
+  }
+  &.tile-status--error--reason {
+    .tile-body {
+      .tile-transaction-type-block {
+        .tile-label, .tile-status-label {
+          color: #ff7986;
+        }
+      }
+    }
+  }
+  &.tile-type-block {
+    padding: 1.875rem 1.5rem;
+  }
   span[data-address-hash] {
     color: $tile-body-a-color;
   }
@@ -185,13 +245,26 @@ $tile-body-a-color: #5959d8 !default;
   }
 
   .tile-body {
+    .content-txs {
+      gap: 10px;
+
+      .text-tx-fee {
+        color: #757F8F;
+      }
+    }
     a {
-      color: $tile-body-a-color;
+      font-weight: 400;
+      font-size: 12px;
+      line-height: 150%;
       &:hover {
         span {
           text-decoration: underline;
         }
       }
+    }
+
+    .tile-transaction-type-block {
+      background-color: #2B272E;
     }
   }
 
@@ -209,12 +282,10 @@ $tile-body-a-color: #5959d8 !default;
     }
   }
   border-radius: 4px;
-  border: 1px solid $border-color;
   color: $text-muted;
   flex-grow: 1;
   font-size: 12px;
   line-height: 1.4rem;
-  padding: $tile-padding;
 
   @include generate-tile-block(
     ".tile-type-block",
@@ -287,10 +358,10 @@ $tile-body-a-color: #5959d8 !default;
   &.tile-type-block {
     max-width: 100%;
     .tile-title {
-      font-weight: 700;
-      line-height: 1.2;
-      margin-bottom: 12px;
-      padding: 1rem 1rem 0 1rem;
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 150%;
+      color: #FFFFFF;
     }
   }
 
@@ -336,13 +407,17 @@ $tile-body-a-color: #5959d8 !default;
     border-radius: 2px;
     height: 4px;
     margin-top: 8px;
-    width: 120px;
+    width: 150px;
 
     .progress-bar {
       background-color: $tile-type-progress-bar-color;
       border-radius: 2px;
     }
   }
+}
+
+.demo-blocks {
+  padding: 1rem;
 }
 
 .card-chain-blocks {
@@ -592,6 +667,9 @@ $cube-quantity: 5;
   display: inline-block;
   vertical-align: middle;
   margin-top: 3px;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 125%;
   @include media-breakpoint-down(sm) {
     display: inline;
   }

@@ -105,7 +105,7 @@ $dark-primary-alternate: $dark-primary;
 
 	// main container, layout, cards
 	.layout-container main {
-		background-color: $body-dark;
+		background-color: #13151F;
 	}
 
 	.card {
@@ -795,8 +795,8 @@ $dark-primary-alternate: $dark-primary;
 	}
 
 	.alert-danger {
-		background-color: $dark-light;
-		border-color: $dark-light;
+		background-color: #191C29;
+		border-color: #191C29;
 		.alert-link {
 			color: $alert-danger-color;
 		}

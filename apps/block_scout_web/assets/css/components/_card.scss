@@ -51,14 +51,18 @@ $card-tab-icon-color-active: #fff !default;
 }
 
 .card-title {
-  font-size: 18px;
-  font-weight: normal;
-  line-height: 1.2rem;
-  margin-bottom: 2rem;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 1.25rem;
+  margin-bottom: 1.5rem;
+  color: #ffffff;
 
   &.lg-card-title {
     @media (max-width: 374px) {
       font-size: 13px;
+    }
+    &.mb-2-desktop {
+      margin-bottom: 0.75rem;
     }
   }
 
@@ -154,7 +158,25 @@ $card-tab-icon-color-active: #fff !default;
 }
 
 .card-body {
-  padding: $card-horizontal-padding;
+  padding: 0;
+
+  .row {
+    margin-bottom: 18px;
+    
+    .i-infor {
+      color: #757F8F;
+      font-style: normal;
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 150%;
+    }
+    .i-value {
+      font-style: normal;
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 150%;
+    }
+  }
 }
 
 .card-body-flex-column-space-between {
@@ -185,6 +207,19 @@ $card-tab-icon-color-active: #fff !default;
   .tile {
     margin-bottom: 0;
   }
+
+  .tile, .tile-code {
+		border-top-color: #191C29 !important;
+		border-bottom-color: #191C29 !important;
+		border-right-color: #191C29 !important;
+		background-color: #191C29 !important;
+		&:not([class^="tile tile-type"]) {
+			border-left-color: #191C29 !important;
+		}
+		&.tile-type-coin-balance {
+			border-left-color: #191C29 !important;
+		}
+	}
 }
 
 .card-tabs {

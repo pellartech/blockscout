@@ -28,8 +28,12 @@
           <% end %>
           <h1 class="card-title lg-card-title mb-2-desktop">
             <div class="title-with-label"><%= address_title(@address) %> <%= gettext "Details" %></div>
+            <%= render BlockScoutWeb.AddressView, "_labels.html", address_hash: @address.hash, tags: @tags %>
+          </h1>
+          <h3 class="address-detail-hash-title mb-4 <%= if BlockScoutWeb.AddressView.contract?(@address) do %>contract-address<% end %>" data-test="address_detail_hash">
+            <%= @address %>
             <!-- buttons -->
-            <span class="overview-title-buttons float-right">
+            <span class="overview-title-buttons">
               <%= render BlockScoutWeb.CommonComponentsView, "_btn_copy.html",
                       id: "tx-raw-input",
                       additional_classes: ["overview-title-item"],
@@ -57,8 +61,7 @@
                 </span>
               <% end %>
             </span>
-          </h1>
-          <h3 class="address-detail-hash-title mb-4 <%= if BlockScoutWeb.AddressView.contract?(@address) do %>contract-address<% end %>" data-test="address_detail_hash"><%= @address %></h3>
+          </h3>
           <!-- Verify in other explorers -->
           <!--
           <%# <%= render "_verify_other_explorers.html", hash: @address.hash, type: "address" %> %>
@@ -67,12 +70,12 @@
           <%= cond do %>
             <% @address.token -> %>
               <dl class="row">
-                <dt class="col-sm-4 col-md-4 col-lg-3 text-muted">
+                <dt class="col-sm-4 col-md-4 col-lg-3 text-muted i-infor">
                   <%= render BlockScoutWeb.CommonComponentsView, "_i_tooltip_2.html",
                   text: gettext("Token name and symbol.") %>
                   <%= gettext("Token") %>
                 </dt>
-                <dd class="col-sm-8 col-md-8 col-lg-9" data-test="address_token">
+                <dd class="col-sm-8 col-md-8 col-lg-9 i-value" data-test="address_token">
                   <%= link(
                     token_title(@address.token),
                     to: token_path(@conn,
@@ -87,23 +90,23 @@
             <% address_name -> %>
               <%= if contract?(@address) do %>
                 <dl class="row">
-                  <dt class="col-sm-4 col-md-4 col-lg-3 text-muted">
+                  <dt class="col-sm-4 col-md-4 col-lg-3 text-muted i-infor">
                     <%= render BlockScoutWeb.CommonComponentsView, "_i_tooltip_2.html",
                     text: gettext("The name found in the source code of the Contract.") %>
                     <%= gettext("Contract Name") %>
                   </dt>
-                  <dd class="col-sm-8 col-md-8 col-lg-9" data-test="address_contract">
+                  <dd class="col-sm-8 col-md-8 col-lg-9 i-value" data-test="address_contract">
                     <%= short_contract_name(address_name, 30) %>
                   </dd>
                 </dl>
               <% else %>
                 <dl class="row">
-                  <dt class="col-sm-4 col-md-4 col-lg-3 text-muted">
+                  <dt class="col-sm-4 col-md-4 col-lg-3 text-muted i-infor">
                     <%= render BlockScoutWeb.CommonComponentsView, "_i_tooltip_2.html",
                     text: gettext("The name of the validator.") %>
                     <%= gettext("Validator Name") %>
                   </dt>
-                  <dd class="col-sm-8 col-md-8 col-lg-9" data-test="address_contract">
+                  <dd class="col-sm-8 col-md-8 col-lg-9 i-value" data-test="address_contract">
                     <%= short_contract_name(address_name, 30) %>
                   </dd>
                 </dl>
@@ -114,12 +117,12 @@
           <% from_address_hash = from_address_hash(@address) %>
           <%= if contract?(@address) do %>
             <dl class="row">
-              <dt class="col-sm-4 col-md-4 col-lg-3 text-muted">
+              <dt class="col-sm-4 col-md-4 col-lg-3 text-muted i-infor">
                 <%= render BlockScoutWeb.CommonComponentsView, "_i_tooltip_2.html",
                 text: gettext("Transactions and address of creation.") %>
                 <%= gettext("Creator") %>
               </dt>
-              <dd class="col-sm-8 col-md-8 col-lg-9" data-test="address_contract_creator">
+              <dd class="col-sm-8 col-md-8 col-lg-9 i-value" data-test="address_contract_creator">
                 <%= if from_address_hash do %>
                   <%= link(
                     trimmed_hash(from_address_hash(@address)),
@@ -144,12 +147,12 @@
             <% {implementation_address, name} = Chain.get_implementation_address_hash(@address.hash, @address.smart_contract.abi) || "0x0000000000000000000000000000000000000000" %>
             <%= if implementation_address do %>
               <dl class="row">
-                <dt class="col-sm-4 col-md-4 col-lg-3 text-muted">
+                <dt class="col-sm-4 col-md-4 col-lg-3 text-muted i-infor">
                   <%= render BlockScoutWeb.CommonComponentsView, "_i_tooltip_2.html",
                   text: gettext("Implementation address of the proxy contract.") %>
                   <%= gettext("Implementation") %>
                 </dt>
-                <dd class="col-sm-8 col-md-8 col-lg-9" data-test="address_contract_implementation">
+                <dd class="col-sm-8 col-md-8 col-lg-9 i-value" data-test="address_contract_implementation">
                   <%= link(
                     (if name, do: name <> " | " <> implementation_address, else: implementation_address),
                     to: address_path(@conn, :show, implementation_address),
@@ -162,12 +165,12 @@
           <% end %>
           <!-- Balance -->
           <dl class="row">
-            <dt class="col-sm-4 col-md-4 col-lg-3 text-muted">
+            <dt class="col-sm-4 col-md-4 col-lg-3 text-muted i-infor">
               <%= render BlockScoutWeb.CommonComponentsView, "_i_tooltip_2.html",
               text: gettext("Address balance in") <> " " <> Explorer.coin_name() <> " " <> gettext("doesn't include ERC20, ERC721, ERC1155 tokens).") %>
               <%= gettext("Balance") %>
             </dt>
-            <dd data-selector="current-coin-balance" class="col-sm-8 col-md-8 col-lg-9" data-test="address_balance">
+            <dd data-selector="current-coin-balance" class="col-sm-8 col-md-8 col-lg-9 i-value" data-test="address_balance">
               <%= balance(@address) %>
               <%= if !match?({:pending, _}, @coin_balance_status) && !empty_exchange_rate?(@exchange_rate) do %>
                 <% usd_value = to_string(@exchange_rate.usd_value) %>
@@ -187,23 +190,23 @@
           </dl>
           <!-- Tokens -->
           <dl class="row" data-test="outside_of_dropdown">
-            <dt class="col-sm-4 col-md-4 col-lg-3 text-muted">
+            <dt class="col-sm-4 col-md-4 col-lg-3 text-muted i-infor">
               <%= render BlockScoutWeb.CommonComponentsView, "_i_tooltip_2.html",
               text: gettext("All tokens in the account and total value.") %>
               <%= gettext("Tokens") %>
             </dt>
-            <dd class="col-sm-8 col-md-8 col-lg-9" data-test="address_tokens" data-selector="balance-card">
+            <dd class="col-sm-8 col-md-8 col-lg-9 i-value" data-test="address_tokens" data-selector="balance-card">
               <%= render BlockScoutWeb.AddressView, "_balance_dropdown.html", conn: @conn, address: @address %>
             </dd>
           </dl>
           <!-- Transaction count -->
           <dl class="row address-transactions-count-item">
-            <dt class="col-sm-4 col-md-4 col-lg-3 text-muted">
+            <dt class="col-sm-4 col-md-4 col-lg-3 text-muted i-infor">
               <%= render BlockScoutWeb.CommonComponentsView, "_i_tooltip_2.html",
               text: gettext("Number of transactions related to this address.") %>
               <%= gettext("Transactions") %>
             </dt>
-            <dd class="col-sm-8 col-md-8 col-lg-9" data-test="address_transaction_count">
+            <dd class="col-sm-8 col-md-8 col-lg-9 i-value" data-test="address_transaction_count">
               <%= if @conn.request_path |> String.contains?("/transactions") do %>
                 <a href="#txs" class="page-link bs-label large btn-no-border-link-to-tems" data-selector="transaction-count">
                   <%= if @address.transactions_count do %>
@@ -225,12 +228,12 @@
           </dl>
           <!-- Transfers count -->
           <dl class="row address-transfers-count-item">
-            <dt class="col-sm-4 col-md-4 col-lg-3 text-muted">
+            <dt class="col-sm-4 col-md-4 col-lg-3 text-muted i-infor">
               <%= render BlockScoutWeb.CommonComponentsView, "_i_tooltip_2.html",
               text: gettext("Number of transfers to/from this address.") %>
               <%= gettext("Transfers") %>
             </dt>
-            <dd class="col-sm-8 col-md-8 col-lg-9" data-test="address_transfer_count">
+            <dd class="col-sm-8 col-md-8 col-lg-9 i-value" data-test="address_transfer_count">
               <%= if @conn.request_path |> String.contains?("/token-transfers") do %>
                 <a href="#transfers" class="page-link bs-label large btn-no-border-link-to-tems" data-selector="transfer-count">
                   <%= if @address.token_transfers_count do %>
@@ -252,12 +255,12 @@
           </dl>
           <!-- Gas used -->
           <dl class="row address-gas-used-item">
-            <dt class="col-sm-4 col-md-4 col-lg-3 text-muted">
+            <dt class="col-sm-4 col-md-4 col-lg-3 text-muted i-infor">
               <%= render BlockScoutWeb.CommonComponentsView, "_i_tooltip_2.html",
               text: gettext("Gas used by the address.") %>
               <%= gettext("Gas Used") %>
             </dt>
-            <dd class="col-sm-8 col-md-8 col-lg-9" data-test="address_gas_used">
+            <dd class="col-sm-8 col-md-8 col-lg-9 i-value" data-test="address_gas_used">
               <span data-selector="gas-usage-count">
                 <%= if @address.gas_used do %>
                   <%= Number.Delimit.number_to_delimited(@address.gas_used, precision: 0) %>
@@ -270,12 +273,12 @@
           <!-- Last balance update -->
           <%= if @address.fetched_coin_balance_block_number do %>
             <dl class="row">
-              <dt class="col-sm-4 col-md-4 col-lg-3 text-muted">
+              <dt class="col-sm-4 col-md-4 col-lg-3 text-muted i-infor">
                 <%= render BlockScoutWeb.CommonComponentsView, "_i_tooltip_2.html",
                 text: gettext("Block number in which the address was updated.") %>
                 <%= gettext("Last Balance Update") %>
               </dt>
-              <dd data-selector="last-balance-update" class="col-sm-8 col-md-8 col-lg-9" data-test="address_last_balance_update">
+              <dd data-selector="last-balance-update" class="col-sm-8 col-md-8 col-lg-9 i-value" data-test="address_last_balance_update">
                 <%= link(
                     @address.fetched_coin_balance_block_number,
                     to: block_path(@conn, :show, @address.fetched_coin_balance_block_number),
@@ -287,12 +290,12 @@
           <div data-last-balance-update="<%= @address.fetched_coin_balance_block_number %>"></div>
           <!-- Blocks Validated -->
           <dl class="row address-validation-count-item" style="display: none;">
-            <dt class="col-sm-4 col-md-4 col-lg-3 text-muted">
+            <dt class="col-sm-4 col-md-4 col-lg-3 text-muted i-infor">
               <%= render BlockScoutWeb.CommonComponentsView, "_i_tooltip_2.html",
               text: gettext("Number of blocks validated by this validator.") %>
               <%= gettext("Blocks Validated") %>
             </dt>
-            <dd class="col-sm-8 col-md-8 col-lg-9" data-test="address_blocks_validated">
+            <dd class="col-sm-8 col-md-8 col-lg-9 i-value" data-test="address_blocks_validated">
               <span data-selector="validation-count">
               </span>
             </dd>
