@@ -143,8 +143,11 @@ $dark-stakes-banned-background: #3e314c;
 	}
 
 	.card {
-		background-color: transparent;
+		background-color: #0E0F16;
 		box-shadow: unset;
+		&.js-ad-dependant-mb-2 {
+			background-color: transparent;
+		}
 	}
 
 	.card-header {
@@ -162,7 +165,7 @@ $dark-stakes-banned-background: #3e314c;
 	}
 
 	.card-tabs {
-		border-bottom-color: darken($labels-dark, 30);
+		border-bottom-color: #191C29;
 	}
 
 	.card-tab {

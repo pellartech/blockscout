@@ -28,12 +28,11 @@
           <% end %>
           <h1 class="card-title lg-card-title mb-2-desktop">
             <div class="title-with-label"><%= address_title(@address) %> <%= gettext "Details" %></div>
-            <%= render BlockScoutWeb.AddressView, "_labels.html", address_hash: @address.hash, tags: @tags %>
           </h1>
           <h3 class="address-detail-hash-title mb-4 <%= if BlockScoutWeb.AddressView.contract?(@address) do %>contract-address<% end %>" data-test="address_detail_hash">
             <%= @address %>
             <!-- buttons -->
-            <span class="overview-title-buttons">
+            <span class="overview-title-buttons float-right">
               <%= render BlockScoutWeb.CommonComponentsView, "_btn_copy.html",
                       id: "tx-raw-input",
                       additional_classes: ["overview-title-item"],

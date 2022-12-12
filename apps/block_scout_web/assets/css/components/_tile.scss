@@ -1,12 +1,12 @@
 $tile-type-block-color: $primary !default;
 $tile-type-uncle-color: $cyan !default;
 $tile-type-reorg-color: $purple !default;
-$tile-type-emission-reward-color: $lilac !default;
+$tile-type-emission-reward-color: #FFA869 !default; // $lilac
 $tile-type-transaction-color: #FFA869 !default;
-$tile-type-contract-call-color: $green !default;
-$tile-type-contract-creation-color: $dark-purple !default;
-$tile-type-token-transfer-color: $blue !default;
-$tile-type-unique-token-color: $blue !default;
+$tile-type-contract-call-color: #FFA869 !default; // $green
+$tile-type-contract-creation-color: #FFA869 !default; // $dark-purple
+$tile-type-token-transfer-color: #FFA869 !default; // $blue
+$tile-type-unique-token-color: #FFA869 !default; // $blue
 $tile-type-unique-token-image-color: $blue !default;
 $tile-type-internal-transaction-color: $teal !default;
 $tile-type-api-documentation-color: $primary !default;
@@ -80,18 +80,12 @@ $tile-body-a-color: #5959d8 !default;
   }
 }
 
-.tile-tx {
-  bottom: -18px !important;
-  margin-top: -36px !important;
-  background-color: #2B272E;
-}
-
 .tile-transaction-type-block {
   align-items: center;
-  bottom: -30px;
+  bottom: -48px;
   justify-content: center;
   margin-left: -9px;
-  margin-top: -60px;
+  margin-top: -78px;
   padding: 0 5px;
   position: relative;
 
@@ -110,6 +104,12 @@ $tile-body-a-color: #5959d8 !default;
       margin-left: 0 !important;
     }
   }
+}
+
+.tile-tx {
+  bottom: -36px;
+  margin-top: -54px;
+  background-color: #2B272E;
 }
 
 .tile-status-label {

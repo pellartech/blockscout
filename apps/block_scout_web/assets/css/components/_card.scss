@@ -51,10 +51,10 @@ $card-tab-icon-color-active: #fff !default;
 }
 
 .card-title {
-  font-size: 20px;
-  font-weight: 700;
-  line-height: 1.25rem;
-  margin-bottom: 1.5rem;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 150%;
+  margin: 32px 0 24px 24px;
   color: #ffffff;
 
   &.lg-card-title {
@@ -242,10 +242,10 @@ $card-tab-icon-color-active: #fff !default;
   color: #333;
   cursor: pointer;
   display: flex;
-  font-size: 14px;
-  font-weight: normal;
-  height: 70px;
-  padding: 0 25px;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 125%;
+  padding: 16px;
   text-align: center;
   transition: $transition-cont;
 
@@ -297,6 +297,17 @@ $card-tab-icon-color-active: #fff !default;
       }
     }
   }
+}
+
+.card-no-data {
+  background: #13151F;
+  border-radius: 8px;
+  margin: 0 24px 24px 24px;
+  padding: 28px 16px;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 150%;
+  color: #757F8F;
 }
 
 .mob-transaction {
