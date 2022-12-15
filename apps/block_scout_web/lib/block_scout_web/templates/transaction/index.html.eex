@@ -7,7 +7,7 @@
 </script>
 <section class="container" data-page="transaction-list">
   <%= render BlockScoutWeb.Advertisement.TextAdView, "index.html", conn: @conn %>
-  <div class="card">
+  <div class="card card-txs">
     <div class="card-body" data-async-listing="<%= @current_path %>">
       <h1 class="card-title list-title-description"><%= gettext "Validated Transactions" %></h1>
       <div class="list-top-pagination-container-wrapper">

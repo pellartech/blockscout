@@ -538,7 +538,7 @@ $c-dark-text-color: #8a8dba;
 		visibility: hidden;
 	}
 
-	.card-body {  
+	.card-body { 
 		a:not(.dropdown-item):not(.button):not([data-test=address_hash_link]):not(.alert-link):not(#dropdown-tokens):not(.btn-line):not(.page-link) {
 			color: $c-primary;
 	

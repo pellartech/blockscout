@@ -4,8 +4,10 @@ $pagination-page-link-background-active: $primary !default;
 $pagination-page-link-color-active: #fff !default;
 
 @mixin pagination-container-base($background-color, $text-color) {
-  background-color: $background-color;
-  border: 1px solid $background-color;
+  // background-color: $background-color;
+  // border: 1px solid $background-color;
+  border-color: #00E7FF;
+  background-color: #00E7FF;
   color: $text-color;
 
   path {

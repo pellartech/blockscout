@@ -62,8 +62,14 @@ $card-tab-icon-color-active: #fff !default;
       font-size: 13px;
     }
     &.mb-2-desktop {
+      margin: unset;
       margin-bottom: 0.75rem;
     }
+  }
+
+  &.list-title-description {
+    margin: unset;
+    margin-bottom: 1.5rem;
   }
 
   &.margin-bottom-md {
@@ -158,6 +164,7 @@ $card-tab-icon-color-active: #fff !default;
 }
 
 .card-body {
+  // padding: 32px 24px 24px 24px;
   padding: 0;
 
   .row {
@@ -299,15 +306,21 @@ $card-tab-icon-color-active: #fff !default;
   }
 }
 
-.card-no-data {
-  background: #13151F;
-  border-radius: 8px;
-  margin: 0 24px 24px 24px;
-  padding: 28px 16px;
-  font-weight: 400;
-  font-size: 14px;
-  line-height: 150%;
-  color: #757F8F;
+.card {
+  .card-body {
+    .tile {
+      &.tile-muted {
+        background: #13151F !important;
+        border-radius: 8px !important;
+        margin: 0 24px 24px 24px;
+        padding: 28px 16px;
+        font-weight: 400;
+        font-size: 14px !important;
+        line-height: 150% !important;
+        color: #757F8F !important;
+      }
+    }
+  }
 }
 
 .mob-transaction {

@@ -51,7 +51,7 @@
         </button>
 
         <div data-empty-response-message style="display: none;">
-          <div class="tile tile-muted text-center card-no-data" data-selector="empty-transactions-list">
+          <div class="tile tile-muted text-center" data-selector="empty-transactions-list">
             <%= gettext "There are no transactions for this address." %>
           </div>
         </div>

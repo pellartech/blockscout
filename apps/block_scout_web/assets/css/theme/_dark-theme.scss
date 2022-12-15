@@ -35,6 +35,10 @@ $dark-stakes-banned-background: #3e314c;
 .dark-theme-applied {
 	color: #fff;
 
+	.modal {
+		background-color: rgba(19, 21, 31, 0.9);
+	}
+
 	// navbar
 	.navbar.navbar-primary {
 		background-color: #0E0F16;
@@ -148,6 +152,10 @@ $dark-stakes-banned-background: #3e314c;
 		&.js-ad-dependant-mb-2 {
 			background-color: transparent;
 		}
+	}
+
+	.card-block, .card-txs {
+		background-color: transparent;
 	}
 
 	.card-header {
@@ -883,9 +891,13 @@ $dark-stakes-banned-background: #3e314c;
 	.modal-dialog {
 		.modal-title {
 			color: #fff;
+			font-weight: 700;
+			font-size: 20px;
+			line-height: 125%;
 		}
 		.modal-content {
-			background-color: $dark-light-bg;
+			background-color: #0E0F16;
+			border-radius: 8px;
 		}
 
 		.modal-bottom-disclaimer {
@@ -1179,6 +1191,12 @@ $dark-stakes-banned-background: #3e314c;
 }
 
 .dark-theme-applied .btn-no-border-link-to-tems {
-	border-color: $dark-primary;
-	color: $dark-primary;
+	color: $dark-primary !important;
+	background-color: #1D2A37 !important;
+	opacity: 0.5;
+	border-radius: 6px;
+	font-weight: 400;
+	font-size: 12px;
+	line-height: 150%;
+	margin-left: 0;
 }
