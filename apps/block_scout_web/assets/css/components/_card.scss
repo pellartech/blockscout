@@ -51,11 +51,18 @@ $card-tab-icon-color-active: #fff !default;
 }
 
 .card-title {
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 150%;
-  margin: 32px 0 24px 24px;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 1.25rem;
+  margin-bottom: 1.5rem;
   color: #ffffff;
+
+  &.card-title-2 {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 150%;
+    // margin: 32px 0 24px 24px;
+  }
 
   &.lg-card-title {
     @media (max-width: 374px) {
@@ -167,8 +174,12 @@ $card-tab-icon-color-active: #fff !default;
   // padding: 32px 24px 24px 24px;
   padding: 0;
 
+  .list-data-item {
+    // padding: 0 24px;
+  }
+
   .row {
-    margin-bottom: 18px;
+    // margin-bottom: 18px;
     
     .i-infor {
       color: #757F8F;
@@ -312,13 +323,19 @@ $card-tab-icon-color-active: #fff !default;
       &.tile-muted {
         background: #13151F !important;
         border-radius: 8px !important;
-        margin: 0 24px 24px 24px;
+        margin-bottom: 12px;
         padding: 28px 16px;
         font-weight: 400;
         font-size: 14px !important;
         line-height: 150% !important;
         color: #757F8F !important;
       }
+    }
+  }
+
+  &.card-2 {
+    .card-body {
+      padding: 32px 24px 24px 24px;
     }
   }
 }

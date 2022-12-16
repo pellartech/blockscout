@@ -81,7 +81,7 @@
       </span>
       <span class="mr-2 mr-md-0 order-2 days-ago" in-tile data-from-now="<%= block_timestamp(@transaction) %>"></span>
       <%= if from_or_to_address?(@transaction, assigns[:current_address]) do %>
-        <span class="mr-2 mr-md-0 order-0 order-md-3">
+        <span class="mr-2 mr-md-0 order-0 order-md-3 mt-2">
           <%= if @transaction.from_address_hash == assigns[:current_address].hash do %>
             <span data-test="transaction_type" class="badge badge-danger tile-badge">
               <%= gettext "OUT" %>

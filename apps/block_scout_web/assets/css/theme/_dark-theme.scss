@@ -147,11 +147,24 @@ $dark-stakes-banned-background: #3e314c;
 	}
 
 	.card {
-		background-color: #0E0F16;
+		background-color: transparent;
 		box-shadow: unset;
 		&.js-ad-dependant-mb-2 {
 			background-color: transparent;
 		}
+
+		.card-body {
+			.list-data-item {
+				.tile {
+					background-color: #13151F;
+				}
+			}
+		}
+	}
+
+	.card-2 {
+		background-color: #0E0F16;
+		border-radius: 8px;
 	}
 
 	.card-block, .card-txs {
@@ -383,8 +396,11 @@ $dark-stakes-banned-background: #3e314c;
 
 	// table
 	.stakes-table-head, .stakes-table-th {
-		background-color: $dark-light;
-		color: $labels-dark;
+		background-color: transparent;
+		color: #757F8F;
+		font-weight: 400;
+		font-size: 12px;
+		line-height: 150%;
 	}
 
 	.stakes-table-body {
@@ -395,8 +411,16 @@ $dark-stakes-banned-background: #3e314c;
 		}
 	}
 
+	.addresses-table-container {
+		tbody tr {
+			background-color: #0E0F16;
+			border-radius: 8px;
+			margin-bottom: 12px;
+		}
+	}
+
 	.stakes-td {
-		border-bottom-color: darken($labels-dark, 30);
+		border: none;
 	}
 
 	.stakes-tr-banned {
@@ -466,6 +490,15 @@ $dark-stakes-banned-background: #3e314c;
 	.badge.badge-neutral {
 		background-color: rgba($dark-primary, .15);
 		color: $dark-primary;
+	}
+
+	.badge.badge-danger {
+		background-color: #2B272E;
+		color: #FFA869;
+	}
+	.badge.badge-success {
+		background-color: #181F21;
+		color: #75E44E;
 	}
 
 	// download csv button

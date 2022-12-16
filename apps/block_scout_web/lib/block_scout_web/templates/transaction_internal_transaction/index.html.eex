@@ -1,9 +1,9 @@
 <section class="container">
   <%= render BlockScoutWeb.TransactionView, "overview.html", assigns %>
-  <div class="card">
+  <div class="card card-2">
     <%= render BlockScoutWeb.TransactionView, "_tabs.html", assigns %>
     <div class="card-body" data-async-load data-async-listing="<%= @current_path %>">
-      <h1 class="card-title list-title-description"><%= gettext "Internal Transactions" %></h1>
+      <h1 class="card-title list-title-description card-title-2"><%= gettext "Internal Transactions" %></h1>
 
       <div class="list-top-pagination-container-wrapper">
         <%= render BlockScoutWeb.CommonComponentsView, "_pagination_container.html", position: "top", cur_page_number: "1", show_pagination_limit: true, data_next_page_button: true, data_prev_page_button: true %>
@@ -18,7 +18,7 @@
         </div>
       </div>
 
-      <div data-items>
+      <div data-items class="list-data-item">
         <%= render BlockScoutWeb.CommonComponentsView, "_tile-loader.html" %>
       </div>
 

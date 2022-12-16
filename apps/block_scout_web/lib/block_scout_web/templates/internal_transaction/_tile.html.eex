@@ -2,7 +2,7 @@
 <div class="tile tile-type-internal-transaction fade-in <%= if error, do: "tile-status--error--reason"%>" data-test="internal_transaction" data-key="<%= @internal_transaction.transaction_hash %>_<%= @internal_transaction.index %>" data-internal-transaction-transaction-hash="<%= @internal_transaction.transaction_hash %>" data-internal-transaction-index="<%= @internal_transaction.index %>">
   <div class="row tile-body">
     <!-- Color Block -->
-    <div class="tile-transaction-type-block col-md-2 d-flex flex-row flex-md-column">
+    <div class="tile-transaction-type-block col-md-2 d-flex flex-row flex-md-column tile-tx">
       <span class="tile-label">
         <%= gettext("Internal Transaction") %>
       </span>
@@ -12,7 +12,7 @@
       <% end %>
     </div>
     <!-- Content -->
-    <div class="col-md-7 col-lg-8 d-flex flex-column pr-2 pr-sm-2 pr-md-0">
+    <div class="col-md-7 col-lg-8 d-flex flex-column pr-2 pr-sm-2 pr-md-0 content-txs">
       <%= render BlockScoutWeb.TransactionView, "_link.html", transaction_hash: @internal_transaction.transaction_hash %>
       <span class="text-nowrap">
         <%= @internal_transaction |> BlockScoutWeb.AddressView.address_partial_selector(:from, assigns[:current_address]) |> (&(if is_list(&1), do: Keyword.put(&1, :ignore_implementation_name, true), else: &1)).() |> BlockScoutWeb.RenderHelpers.render_partial() %>
@@ -35,7 +35,7 @@
       </span>
       <span class="mr-2 mr-md-0 order-2" in-tile data-from-now="<%= @internal_transaction.transaction.block.timestamp %>"></span>
       <%= if assigns[:current_address] do %>
-        <span class="mr-2 mr-md-0 order-0 order-md-3">
+        <span class="mr-2 mr-md-0 order-0 order-md-3 mt-2">
           <%= if assigns[:current_address].hash == @internal_transaction.from_address_hash do %>
             <span class="badge badge-danger tile-badge"><%= gettext "OUT" %></span>
           <% else %>

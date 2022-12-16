@@ -9,13 +9,13 @@ $badge-neutral-background-color: rgba($secondary, .1) !default;
   color: $white;
 
   &.tile-badge {
-    font-size: 10px;
-    font-weight: bold;
-    height: 20px;
-    line-height: 20px;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 18px;
     margin: 0;
-    padding: 0 11px;
+    padding: 2px 10px;
     width: auto;
+    border-radius: 4px;
   }
 
   &.api-badge {

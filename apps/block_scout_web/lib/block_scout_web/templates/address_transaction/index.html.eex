@@ -5,12 +5,12 @@
   <%= render BlockScoutWeb.AddressView, "overview.html", address: @address, is_proxy: is_proxy, conn: @conn, exchange_rate: @exchange_rate, coin_balance_status: @coin_balance_status, counters_path: @counters_path %>
 
   <section data-page="address-transactions" id="txs">
-    <div class="card">
+    <div class="card card-2">
       <%= render BlockScoutWeb.AddressView, "_tabs.html", address: @address, is_proxy: is_proxy, conn: @conn %>
       <div class="card-body" data-async-listing="<%= @current_path %>">
         <%= render BlockScoutWeb.CommonComponentsView, "_channel_disconnected_message.html", text: gettext("Connection Lost, click to load newer transactions") %>
         <div class="clearfix">
-          <h2 class="card-title float-left"><%= gettext "Transactions" %></h2>
+          <h2 class="card-title float-left card-title-2"><%= gettext "Transactions" %></h2>
           <div class="top-pagination-outer-container float-right">
             <div class="dropdown u-push-sm">
               <button data-test="filter_dropdown" class="btn-dropdown-line dropdown-toggle" type="button"
@@ -56,7 +56,7 @@
           </div>
         </div>
 
-        <div data-items>
+        <div data-items class="list-data-item">
           <%= render BlockScoutWeb.CommonComponentsView, "_tile-loader.html" %>
         </div>
 

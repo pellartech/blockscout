@@ -82,10 +82,10 @@ $tile-body-a-color: #5959d8 !default;
 
 .tile-transaction-type-block {
   align-items: center;
-  bottom: -48px;
+  bottom: -30px;
   justify-content: center;
   margin-left: -9px;
-  margin-top: -78px;
+  margin-top: -60px;
   padding: 0 5px;
   position: relative;
 
@@ -107,8 +107,8 @@ $tile-body-a-color: #5959d8 !default;
 }
 
 .tile-tx {
-  bottom: -36px;
-  margin-top: -54px;
+  bottom: -18px;
+  margin-top: -36px;
   background-color: #2B272E;
 }
 
@@ -225,6 +225,7 @@ $tile-body-a-color: #5959d8 !default;
     padding: 1.125rem 1.5rem;
   }
   &.tile-status--error--reason {
+    padding: 1.125rem 1.5rem;
     .tile-body {
       .tile-transaction-type-block {
         .tile-label, .tile-status-label {
@@ -235,6 +236,9 @@ $tile-body-a-color: #5959d8 !default;
   }
   &.tile-type-block {
     padding: 1.875rem 1.5rem;
+  }
+  &.tile-type-internal-transaction {
+    padding: 1.125rem 1.5rem;
   }
   span[data-address-hash] {
     color: $tile-body-a-color;
