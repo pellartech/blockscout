@@ -35,6 +35,17 @@ $dark-stakes-banned-background: #3e314c;
 .dark-theme-applied {
 	color: #fff;
 
+	.prime-text {
+		font-weight: 400;
+		font-size: 12px;
+		line-height: 150%;
+		color: #757F8F;
+
+		a {
+			color: #00E7FF;
+		}
+	}
+
 	.modal {
 		background-color: rgba(19, 21, 31, 0.9);
 	}
@@ -232,9 +243,16 @@ $dark-stakes-banned-background: #3e314c;
 		.tile-transaction-type-block {
 			// background-color: transparent;
 		}
+		.tile-internal-tx {
+			background-color: #181F21;
+			color: #75E44E;
+			.tile-label {
+				color: #75E44E;
+			}
+		}
 	}
 	.tile-bottom-contents {
-		background-color: $dark-bg;
+		background-color: #191C29;
 	}
 	a.tile-title {
 		color: #fff !important;
@@ -320,7 +338,7 @@ $dark-stakes-banned-background: #3e314c;
 		}
 	}
 
-	.btn-copy-icon, .btn-qr-icon, .btn-address-card-icon .btn-contract-icon {
+	.btn-copy-icon, .btn-qr-icon, .btn-wallet-icon .btn-address-card-icon .btn-contract-icon {
 		background: #191C29;
     border-radius: 4px;
     border: none;
@@ -370,10 +388,10 @@ $dark-stakes-banned-background: #3e314c;
 
 	// dropdown
 	.dropdown-menu {
-		background-color: $dark-light;
-		border-left-color: $dark-light;
-		border-right-color: $dark-light;
-		border-bottom-color: $dark-light;
+		background-color: #191C29;
+		border-left-color: #191C29;
+		border-right-color: #191C29;
+		border-bottom-color: #191C29;
 	}
 
 	.dropdown-item {
@@ -386,12 +404,13 @@ $dark-stakes-banned-background: #3e314c;
 		background-color: $dark-primary;
 	}
 	.dropdown-item.active.header,	.dropdown-item.header:hover,	.dropdown-item.header:focus {
-		background-color: $dark-light !important;
+		background-color: #191C29 !important;
 	}
 	.btn-dropdown-line {
-		background-color: $dark-light;
-		border-color: $dark-light;
-		color: $labels-dark;
+		background-color: #191C29;
+		border-color: #191C29;
+		color: #757F8F;
+		border-radius: 4px;
 	}
 
 	// table
@@ -417,6 +436,11 @@ $dark-stakes-banned-background: #3e314c;
 			border-radius: 8px;
 			margin-bottom: 12px;
 		}
+	}
+
+	.stakes-tr {
+		background: #13151F;
+		border-radius: 8px;
 	}
 
 	.stakes-td {
@@ -451,11 +475,11 @@ $dark-stakes-banned-background: #3e314c;
 
 	.i-tooltip {
 		.i-tooltip-circle {
-			fill: $labels-dark;
+			fill: #757F8F;
 		}
 
 		.i-tooltip-info {
-			fill: $dark-light-bg;
+			fill: #282945;
 		}
 
 		&:hover {

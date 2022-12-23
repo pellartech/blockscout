@@ -2,9 +2,20 @@ $btn-wallet-color: $btn-line-color !default;
 $btn-wallet-dimensions: 31px !default;
 
 .btn-wallet-icon {
-  @include square-icon-button($btn-wallet-color, $btn-wallet-dimensions);
+  @include square-icon-button(#757F8F, $btn-wallet-dimensions);
   color: $btn-wallet-color;
   &:hover {
     color: #fff;
+  }
+  border: none;
+
+  &:hover {
+    background-color: #00E7FF;
+    path {
+      fill: #13151F;
+    }
+    rect {
+      fill: #00E7FF;
+    }
   }
 }

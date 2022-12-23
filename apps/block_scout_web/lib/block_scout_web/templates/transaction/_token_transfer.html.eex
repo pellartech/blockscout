@@ -3,23 +3,31 @@
     <%= if from_or_to_address?(@token_transfer, @address) do %>
       <%= if @token_transfer.from_address_hash == @address.hash do %>
         <span data-test="transaction_type" class="text-danger">
-            &#8627;
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M13.3536 10.3536C13.5488 10.1583 13.5488 9.84171 13.3536 9.64645L10.1716 6.46447C9.97631 6.2692 9.65973 6.2692 9.46447 6.46447C9.2692 6.65973 9.2692 6.97631 9.46447 7.17157L12.2929 10L9.46447 12.8284C9.2692 13.0237 9.2692 13.3403 9.46447 13.5355C9.65973 13.7308 9.97631 13.7308 10.1716 13.5355L13.3536 10.3536ZM5.5 2C5.5 1.72386 5.27614 1.5 5 1.5C4.72386 1.5 4.5 1.72386 4.5 2H5.5ZM6 10.5H13V9.5H6V10.5ZM5.5 9V2H4.5V9H5.5ZM6 9.5C5.72386 9.5 5.5 9.27614 5.5 9H4.5C4.5 9.82843 5.17157 10.5 6 10.5V9.5Z" fill="#00E7FF"/>
+          </svg>
         </span>
       <% else %>
         <span data-test="transaction_type" class="text-success">
-            &#8627;
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M13.3536 10.3536C13.5488 10.1583 13.5488 9.84171 13.3536 9.64645L10.1716 6.46447C9.97631 6.2692 9.65973 6.2692 9.46447 6.46447C9.2692 6.65973 9.2692 6.97631 9.46447 7.17157L12.2929 10L9.46447 12.8284C9.2692 13.0237 9.2692 13.3403 9.46447 13.5355C9.65973 13.7308 9.97631 13.7308 10.1716 13.5355L13.3536 10.3536ZM5.5 2C5.5 1.72386 5.27614 1.5 5 1.5C4.72386 1.5 4.5 1.72386 4.5 2H5.5ZM6 10.5H13V9.5H6V10.5ZM5.5 9V2H4.5V9H5.5ZM6 9.5C5.72386 9.5 5.5 9.27614 5.5 9H4.5C4.5 9.82843 5.17157 10.5 6 10.5V9.5Z" fill="#00E7FF"/>
+          </svg>
         </span>
       <% end %>
     <% end %>
     <span class="d-inline-block tile-type-token-transfer-short-name">
     <%= @token_transfer |> BlockScoutWeb.AddressView.address_partial_selector(:from, @address, true) |> BlockScoutWeb.RenderHelpers.render_partial() %>
     </span>
-    &rarr;
+    &nbsp;
+    <svg width="16" height="8" viewBox="0 0 16 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M1 3.5C0.723858 3.5 0.5 3.72386 0.5 4C0.5 4.27614 0.723858 4.5 1 4.5V3.5ZM15.3536 4.35355C15.5488 4.15829 15.5488 3.84171 15.3536 3.64645L12.1716 0.464466C11.9763 0.269204 11.6597 0.269204 11.4645 0.464466C11.2692 0.659728 11.2692 0.976311 11.4645 1.17157L14.2929 4L11.4645 6.82843C11.2692 7.02369 11.2692 7.34027 11.4645 7.53553C11.6597 7.7308 11.9763 7.7308 12.1716 7.53553L15.3536 4.35355ZM1 4.5H15V3.5H1V4.5Z" fill="#00E7FF"/>
+    </svg>
+    &nbsp;
     <span class="d-inline-block tile-type-token-transfer-short-name">
     <%= @token_transfer |> BlockScoutWeb.AddressView.address_partial_selector(:to, @address, true) |> BlockScoutWeb.RenderHelpers.render_partial() %>
     </span>
   </span>
-  <span class="col-xs-12 col-lg-4 ml-3 ml-sm-0">
+  <span class="col-xs-12 col-lg-4 ml-3 ml-sm-0 prime-text">
     <%= render BlockScoutWeb.TransactionView, "_total_transfers.html", Map.put(assigns, :transfer, @token_transfer) %>
   </span>
 </div>
