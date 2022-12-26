@@ -63,10 +63,14 @@ $dark-stakes-banned-background: #3e314c;
 		filter: brightness(0) invert(1);
 	}
 	.navbar.navbar-primary .navbar-nav .nav-link {
-		color: $labels-dark;
+		color: #FFFFFF;
+		font-weight: 500;
+		font-size: 16px;
+		line-height: 150%;
+		
 		.nav-link-icon {
 			svg path {
-				fill: $labels-dark;
+				fill: #FFFFFF;
 			}
 		}
 		&.active, &:hover {
@@ -81,8 +85,8 @@ $dark-stakes-banned-background: #3e314c;
 		}
 	}
 	.navbar.navbar-primary .form-control {
-		background-color: $dark-bg;
-		border-color: $dark-bg;
+		background-color: #13151F;
+		border-color: #13151F;
 		color: #fff;
 		&::placeholder {
 			color: $labels-dark;
@@ -94,12 +98,16 @@ $dark-stakes-banned-background: #3e314c;
 
 	// footer
 	.footer {
-		background: $dark-light-bg;
-		color: $labels-dark;
+		background: #0E0F16;
+		color: #9CA3AF;
 	}
 	.footer-social-icon,
 	.footer-link {
-		color: $labels-dark;
+		font-style: normal;
+		font-weight: 400;
+		font-size: 16px;
+		line-height: 150%;
+		color: #9CA3AF;
 	}
 	.footer-social-icon:hover,
 	.footer-link:hover {
@@ -107,6 +115,7 @@ $dark-stakes-banned-background: #3e314c;
 	}
 	.footer-list ul li::before {
 		background-color: $dark-secondary;
+		display: none;
 	}
 
 	// hero stats
@@ -432,9 +441,21 @@ $dark-stakes-banned-background: #3e314c;
 
 	.addresses-table-container {
 		tbody tr {
-			background-color: #0E0F16;
 			border-radius: 8px;
 			margin-bottom: 12px;
+			td {
+				background-color: #0E0F16;
+
+				&:first-child {
+					border-top-left-radius: 8px;
+					border-bottom-left-radius: 8px;
+				}
+
+				&:last-child {
+					border-top-right-radius: 8px;
+					border-bottom-right-radius: 8px;
+				}
+			}
 		}
 	}
 
@@ -445,6 +466,9 @@ $dark-stakes-banned-background: #3e314c;
 
 	.stakes-td {
 		border: none;
+		font-weight: 400;
+		font-size: 12px;
+		line-height: 150%;
 	}
 
 	.stakes-tr-banned {
@@ -670,13 +694,13 @@ $dark-stakes-banned-background: #3e314c;
 
 	// Form Controlls
 	.form-control {
-		background-color: $dark-light;
-		border-color: $dark-light;
+		background-color: #191C29;
+		border-color: #191C29;
 		color: #fff;
 		transition: border-color 0.15s ease-in-out;
 
 		&[readonly] {
-			background-color: $dark-light !important;
+			background-color: #191C29 !important;
 		}
 
 		&::placeholder {
@@ -1169,7 +1193,7 @@ $dark-stakes-banned-background: #3e314c;
 		  }
 	}
 	.main-search-autocomplete {
-		background-color: $dark-bg !important;
+		background-color: #13151F !important;
 		color: #fff !important;
 	}
 	.autocomplete-category {
@@ -1197,14 +1221,14 @@ $dark-stakes-banned-background: #3e314c;
 }
 
 .dark-theme-applied .dropdown-item {
-	background-color: $dark-light !important;
+	background-color: #0E0F16 !important;
 	color: #fff !important;
 }
 
 .dark-theme-applied .dropdown-item.active:not(.header), .dark-theme-applied .dropdown-item:not(.header):hover, .dark-theme-applied .dropdown-item:not(.header):focus {
     background-image: none;
     width: 100%;
-    background-color: #3f426c !important;
+    background-color: #13151F !important;
 }
 
 @media (max-width: 991.98px) {

@@ -104,6 +104,10 @@ $dropdown-menu-item-hover-background: rgba($secondary, 0.1) !default;
   font-size: 12px !important;
 }
 
+.dropdown-toggle.none::after {
+  display: none;
+}
+
 .token-balance-dropdown {
   transform: none !important;
   top: 20px !important;
