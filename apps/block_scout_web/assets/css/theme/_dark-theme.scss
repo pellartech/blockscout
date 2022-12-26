@@ -128,7 +128,12 @@ $dark-stakes-banned-background: #3e314c;
 	.dashboard-banner-network-plain-container::after {
 		background-color: #1F2333;
 	}
-	.dashboard-banner-network-stats-label,
+	.dashboard-banner-network-stats-label {
+		font-weight: 300;
+		font-size: 14px;
+		line-height: 150%;
+		color: #FFFFFF;
+	}
 	.dashboard-banner-chart-legend .dashboard-banner-chart-legend-label {
 		color: $labels-dark;
 	}
@@ -269,6 +274,27 @@ $dark-stakes-banned-background: #3e314c;
 	.tile.tile-type-block .tile-transaction-type-block a {
 		color: #fff;
 	}
+
+	.item-coin-balance {
+		background: #13151F;
+    border-radius: 8px;
+		padding: 20px;
+
+		.time {
+			font-weight: 400;
+			font-size: 12px;
+			line-height: 150%;
+			color: #757F8F;
+			margin-top: 8px;
+		}
+
+		.tile-title-lg {
+			font-weight: 400;
+			font-size: 14px;
+			line-height: 150%;
+		}
+	}
+
 	.fade-up-blocks-chain .tile-type-block-animation {
 		background-color: $dark-light;
 		border-top-color: $dark-light;
@@ -392,6 +418,11 @@ $dark-stakes-banned-background: #3e314c;
 			path {
 				fill: #757F8F;
 			}
+		}
+
+		&.no-hover {
+			padding: 7px 16px;
+			height: 32px;
 		}
 	}
 
@@ -615,8 +646,8 @@ $dark-stakes-banned-background: #3e314c;
 
 	// logs search
 	.logs-search-input, .logs-search-btn, .logs-search-btn-cancel {
-		background-color: $dark-light;
-		border-color: $dark-light;
+		background-color: #191C29;
+		border-color: #191C29;
 		color: #fff;
 	}
 
@@ -797,6 +828,23 @@ $dark-stakes-banned-background: #3e314c;
 				}
 			}
 		}
+	}
+
+	.modal-footer {
+		border-top: none;
+	}
+
+	.button-close {
+		width: 100%;
+    border: 1px solid #FBFBFB !important;
+    border-radius: 8px;
+    padding: 12px 32px;
+    gap: 12px;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 150%;
+    color: #FBFBFB;
+    background-color: transparent !important;
 	}
 
 	#explorersModal {
