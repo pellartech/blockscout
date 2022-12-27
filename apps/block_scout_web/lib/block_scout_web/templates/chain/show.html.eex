@@ -97,6 +97,11 @@
             <% average_block_time -> %>
               <div class="dashboard-banner-network-stats-item dashboard-banner-network-stats-item-1">
                 <span class="dashboard-banner-network-stats-label">
+                  <svg width="20" height="16" viewBox="0 0 20 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M19.4845 5.12543L10.4625 0.125433C10.3144 0.0433344 10.1479 0.000175439 9.97861 5.33737e-07C9.8093 -0.000174371 9.64272 0.0426406 9.49448 0.124433L0.516478 5.08443C0.36027 5.17072 0.229998 5.29724 0.139181 5.45085C0.0483628 5.60447 0.00030757 5.77959 1.47152e-06 5.95805C-0.000304626 6.1365 0.0471494 6.31179 0.13744 6.46572C0.22773 6.61965 0.357567 6.74661 0.513478 6.83343L9.53548 11.8734C9.68401 11.9569 9.85148 12.0008 10.0218 12.001C10.1922 12.0012 10.3598 11.9576 10.5085 11.8744L19.4865 6.87443C19.6424 6.7877 19.7723 6.66081 19.8627 6.50693C19.9531 6.35306 20.0007 6.1778 20.0005 5.99934C20.0002 5.82089 19.9523 5.64574 19.8616 5.49207C19.7708 5.3384 19.6406 5.21181 19.4845 5.12543Z" fill="white"/>
+                    <path d="M19.001 9.12646L10.486 13.8565L1.971 9.12646L1 10.8745L10 15.8745C10.1485 15.9569 10.3156 16.0002 10.4855 16.0002C10.6554 16.0002 10.8225 15.9569 10.971 15.8745L19.971 10.8745L19.001 9.12646Z" fill="white"/>
+                  </svg>
+                  &nbsp;
                   <%= gettext "Average block time" %>
                 </span>
                 <span class="dashboard-banner-network-stats-value" data-selector="average-block-time">
@@ -106,6 +111,11 @@
           <% end %>
           <div class="dashboard-banner-network-stats-item dashboard-banner-network-stats-item-2">
             <span class="dashboard-banner-network-stats-label">
+              <svg width="20" height="16" viewBox="0 0 20 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M19.4845 5.12543L10.4625 0.125433C10.3144 0.0433344 10.1479 0.000175439 9.97861 5.33737e-07C9.8093 -0.000174371 9.64272 0.0426406 9.49448 0.124433L0.516478 5.08443C0.36027 5.17072 0.229998 5.29724 0.139181 5.45085C0.0483628 5.60447 0.00030757 5.77959 1.47152e-06 5.95805C-0.000304626 6.1365 0.0471494 6.31179 0.13744 6.46572C0.22773 6.61965 0.357567 6.74661 0.513478 6.83343L9.53548 11.8734C9.68401 11.9569 9.85148 12.0008 10.0218 12.001C10.1922 12.0012 10.3598 11.9576 10.5085 11.8744L19.4865 6.87443C19.6424 6.7877 19.7723 6.66081 19.8627 6.50693C19.9531 6.35306 20.0007 6.1778 20.0005 5.99934C20.0002 5.82089 19.9523 5.64574 19.8616 5.49207C19.7708 5.3384 19.6406 5.21181 19.4845 5.12543Z" fill="white"/>
+                <path d="M19.001 9.12646L10.486 13.8565L1.971 9.12646L1 10.8745L10 15.8745C10.1485 15.9569 10.3156 16.0002 10.4855 16.0002C10.6554 16.0002 10.8225 15.9569 10.971 15.8745L19.971 10.8745L19.001 9.12646Z" fill="white"/>
+              </svg>
+              &nbsp;
               <%= gettext "Total transactions" %>
             </span>
             <div class="d-flex">
@@ -127,6 +137,11 @@
           </div>
           <div class="dashboard-banner-network-stats-item dashboard-banner-network-stats-item-3">
             <span class="dashboard-banner-network-stats-label">
+              <svg width="20" height="16" viewBox="0 0 20 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M19.4845 5.12543L10.4625 0.125433C10.3144 0.0433344 10.1479 0.000175439 9.97861 5.33737e-07C9.8093 -0.000174371 9.64272 0.0426406 9.49448 0.124433L0.516478 5.08443C0.36027 5.17072 0.229998 5.29724 0.139181 5.45085C0.0483628 5.60447 0.00030757 5.77959 1.47152e-06 5.95805C-0.000304626 6.1365 0.0471494 6.31179 0.13744 6.46572C0.22773 6.61965 0.357567 6.74661 0.513478 6.83343L9.53548 11.8734C9.68401 11.9569 9.85148 12.0008 10.0218 12.001C10.1922 12.0012 10.3598 11.9576 10.5085 11.8744L19.4865 6.87443C19.6424 6.7877 19.7723 6.66081 19.8627 6.50693C19.9531 6.35306 20.0007 6.1778 20.0005 5.99934C20.0002 5.82089 19.9523 5.64574 19.8616 5.49207C19.7708 5.3384 19.6406 5.21181 19.4845 5.12543Z" fill="white"/>
+                <path d="M19.001 9.12646L10.486 13.8565L1.971 9.12646L1 10.8745L10 15.8745C10.1485 15.9569 10.3156 16.0002 10.4855 16.0002C10.6554 16.0002 10.8225 15.9569 10.971 15.8745L19.971 10.8745L19.001 9.12646Z" fill="white"/>
+              </svg>
+              &nbsp;
               <%= gettext "Total blocks" %>
             </span>
             <span class="dashboard-banner-network-stats-value" data-selector="block-count">
@@ -135,6 +150,11 @@
           </div>
           <div class="dashboard-banner-network-stats-item dashboard-banner-network-stats-item-4">
             <span class="dashboard-banner-network-stats-label">
+              <svg width="20" height="16" viewBox="0 0 20 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M19.4845 5.12543L10.4625 0.125433C10.3144 0.0433344 10.1479 0.000175439 9.97861 5.33737e-07C9.8093 -0.000174371 9.64272 0.0426406 9.49448 0.124433L0.516478 5.08443C0.36027 5.17072 0.229998 5.29724 0.139181 5.45085C0.0483628 5.60447 0.00030757 5.77959 1.47152e-06 5.95805C-0.000304626 6.1365 0.0471494 6.31179 0.13744 6.46572C0.22773 6.61965 0.357567 6.74661 0.513478 6.83343L9.53548 11.8734C9.68401 11.9569 9.85148 12.0008 10.0218 12.001C10.1922 12.0012 10.3598 11.9576 10.5085 11.8744L19.4865 6.87443C19.6424 6.7877 19.7723 6.66081 19.8627 6.50693C19.9531 6.35306 20.0007 6.1778 20.0005 5.99934C20.0002 5.82089 19.9523 5.64574 19.8616 5.49207C19.7708 5.3384 19.6406 5.21181 19.4845 5.12543Z" fill="white"/>
+                <path d="M19.001 9.12646L10.486 13.8565L1.971 9.12646L1 10.8745L10 15.8745C10.1485 15.9569 10.3156 16.0002 10.4855 16.0002C10.6554 16.0002 10.8225 15.9569 10.971 15.8745L19.971 10.8745L19.001 9.12646Z" fill="white"/>
+              </svg>
+              &nbsp;
               <%= gettext "Wallet addresses" %>
             </span>
             <span class="dashboard-banner-network-stats-value" data-selector="address-count">
@@ -149,7 +169,12 @@
 <section class="container">
   <div class="card card-chain-blocks js-ad-dependant-mb-3">
     <div class="card-body">
-      <%= link(gettext("View All Blocks"), to: blocks_path(BlockScoutWeb.Endpoint, :index), class: "btn-line float-right") %>
+      <div class="btn-line type-link float-right">
+        <%= link(gettext("View All Blocks"), to: blocks_path(BlockScoutWeb.Endpoint, :index), class: "") %>
+        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M12 12L4 4M5.33333 12H12V5.33333" stroke="#FBFBFB" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </div>
       <h2 class="card-title"><%= gettext "Blocks" %></h2>
       <div class="row" data-selector="chain-block-list" data-url="<%= chain_blocks_path(@conn, :chain_blocks) %>">
         <button data-selector="error-message" class="alert alert-danger col-12 text-left" style="display: none;">
@@ -209,7 +234,12 @@
 
   <div class="card card-chain-transactions">
     <div class="card-body">
-      <%= link(gettext("View All Transactions"), to: transaction_path(BlockScoutWeb.Endpoint, :index), class: "btn-line float-right") %>
+      <div class="btn-line type-link float-right">
+        <%= link(gettext("View All Transactions"), to: transaction_path(BlockScoutWeb.Endpoint, :index), class: "") %>
+        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M12 12L4 4M5.33333 12H12V5.33333" stroke="#FBFBFB" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </div>
       <h2 class="card-title lg-card-title"><%= gettext "Transactions" %></h2>
       <div data-selector="channel-batching-message" style="display: none;">
         <div data-selector="reload-transactions-button" class="alert alert-info">

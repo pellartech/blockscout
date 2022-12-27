@@ -135,10 +135,10 @@ $dark-stakes-banned-background: #3e314c;
 		color: #FFFFFF;
 	}
 	.dashboard-banner-chart-legend .dashboard-banner-chart-legend-label {
-		color: $labels-dark;
+		color: #9CA3AF;
 	}
 	.dashboard-banner-network-stats-item::before {
-		background-color: $dark-secondary;
+		background-color: #75E44E;
 	}
 	.dashboard-banner-chart-legend .dashboard-banner-chart-legend-item {
 		&.price-per-day {
@@ -149,7 +149,7 @@ $dark-stakes-banned-background: #3e314c;
 	  
 		  &.gas-price-oracle {
 			&::before {
-			  background-color: $dark-primary;
+			  background-color: #6978FF;
 			}
 		  }
 	  
@@ -161,7 +161,7 @@ $dark-stakes-banned-background: #3e314c;
 	  
 		  &.tx-per-day {
 			&::before {
-			  background-color: $dashboard-line-color-transactions;
+			  background-color: #00E7FF;
 			}
 		  }
 	}
@@ -370,6 +370,18 @@ $dark-stakes-banned-background: #3e314c;
 		background-color: transparent;
 		&:hover {
 			text-decoration: underline;
+		}
+	}
+
+	.type-link {
+		padding: unset;
+		a {
+			color: #FBFBFB;
+			margin-right: 8px;
+		}
+
+		svg {
+			margin-right: unset;
 		}
 	}
 
