@@ -327,6 +327,10 @@ $card-tab-icon-color-active: #fff !default;
         font-size: 14px !important;
         line-height: 150% !important;
         color: #757F8F !important;
+
+        &.empty-tx {
+          background-color: #191C29 !important;
+        }
       }
     }
   }

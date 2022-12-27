@@ -13,7 +13,7 @@
       <div data-items>
         <%= render BlockScoutWeb.CommonComponentsView, "_tile-loader.html" %>
       </div>
-      <div data-empty-response-message style="display: none;">
+      <div class="tile tile-muted text-center empty-tx" data-empty-response-message style="display: none;">
           <span><%= gettext "There are no blocks." %></span>
       </div>
 

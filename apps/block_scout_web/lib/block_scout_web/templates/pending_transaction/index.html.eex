@@ -17,7 +17,7 @@
       <button data-error-message class="alert alert-danger col-12 text-left" style="display: none;">
         <span href="#" class="alert-link"><%= gettext("Something went wrong, click to reload.") %></span>
       </button>
-      <div data-empty-response-message class="tile tile-muted text-center" style="display: none;">
+      <div data-empty-response-message class="tile tile-muted text-center empty-tx" style="display: none;">
         <span data-selector="empty-transactions-list">
           <%= gettext "There are no pending transactions." %>
         </span>
