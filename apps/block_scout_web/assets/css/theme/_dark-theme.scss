@@ -328,7 +328,8 @@ $dark-stakes-banned-background: #3e314c;
 
 	.tile.tile-type-reorg .tile-transaction-type-block {
 		background: #1D2A37;
-		border-radius: 8px 0px 0px 8px;
+		border-top-left-radius: 8px;
+    border-bottom-left-radius: 8px;
 	}
 
 	.item-coin-balance {
