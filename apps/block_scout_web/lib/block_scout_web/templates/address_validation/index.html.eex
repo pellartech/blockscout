@@ -20,7 +20,7 @@
             <%= gettext "Something went wrong, click to reload." %>
           </span>
         </button>
-        <div data-items data-selector="validations-list">
+        <div data-items data-selector="validations-list" class="list-card">
           <%= render BlockScoutWeb.CommonComponentsView, "_tile-loader.html" %>
         </div>
 

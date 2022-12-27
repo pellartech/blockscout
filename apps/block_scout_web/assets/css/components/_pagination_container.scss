@@ -32,7 +32,7 @@ $pagination-page-link-color-active: #fff !default;
   }
 
   &.position-top {
-    padding-bottom: 30px;
+    padding-bottom: 25px;
   }
 
   .pagination-limit {
@@ -86,9 +86,9 @@ $pagination-page-link-color-active: #fff !default;
       display: flex;
       font-size: 12px;
       font-weight: 600;
-      height: 24px;
+      height: 32px;
       margin: 0;
-      padding: 0 8px;
+      padding: 7px 12px;
       position: relative;
       user-select: none;
       text-align: center;
@@ -177,6 +177,7 @@ $pagination-page-link-color-active: #fff !default;
   border-radius: 2px;
   border-color: $pagination-page-link-color;
   color: $pagination-page-link-color;
+  height: 32px;
 }
 
 .page-number:focus {

@@ -16,7 +16,7 @@
       </p>
     </div>
   </div>
-  <div class="card">
+  <div class="card" id="docs-eth">
     <%= for {method, info} <- Map.to_list(@documentation) do %>
       <%= render "_eth_rpc_item.html", action: method, info: info %>
     <% end %>

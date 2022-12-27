@@ -107,9 +107,9 @@ $card-tab-icon-color-active: #fff !default;
 
 .card-subtitle {
   color: #333;
-  font-size: 12px;
-  font-weight: normal;
-  line-height: 1.2;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 150%;
   margin: 0 0 30px;
 
   &.margin-bottom-0 {
@@ -179,7 +179,7 @@ $card-tab-icon-color-active: #fff !default;
   }
 
   .row {
-    // margin-bottom: 18px;
+    margin-bottom: 16px;
     
     .i-infor {
       color: #757F8F !important;
@@ -336,6 +336,47 @@ $card-tab-icon-color-active: #fff !default;
   &.card-2 {
     .card-body {
       padding: 32px 24px 24px 24px;
+    }
+  }
+}
+
+#account, #logs, #token, #stats, #block, #contract, #transaction, #docs-eth {
+  .card-header {
+    padding: 16px 24px;
+  }
+
+  .api-doc-list-item {
+    padding: 16px 24px;
+
+    .api-doc-list-item-title {
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 150%;
+      margin-bottom: 16px;
+    }
+
+    .api-doc-list-item-text {
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 150%;
+    }
+
+    .api-doc-list-item-query {
+      margin-bottom: 16px;
+    }
+
+    .api-doc-list-item-controls-view-more {
+      font-weight: 500;
+      font-size: 14px;
+      line-height: 150%;
+    }
+
+    .badge.api-badge {
+      font-weight: 400;
+      font-size: 12px;
+      line-height: 150%;
+      padding: 1px 8px;
+      height: auto;
     }
   }
 }

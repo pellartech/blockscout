@@ -192,6 +192,26 @@ $dark-stakes-banned-background: #3e314c;
 		border-radius: 8px;
 	}
 
+	#account, #logs, #token, #stats, #block, #contract, #transaction, #docs-eth {
+		background: #0E0F16;
+    border-radius: 8px;
+
+		.card-header {
+			border-bottom-color: #191C29;
+		}
+		.api-doc-list-item {
+			border-bottom-color: #191C29;
+
+			.api-doc-list-item-title {
+				color: #FFFFFF;
+			}
+
+			.api-doc-list-item-text {
+				color: #757F8F;
+			}
+		}
+	}
+
 	.card-block, .card-txs {
 		background-color: transparent;
 	}
@@ -228,6 +248,12 @@ $dark-stakes-banned-background: #3e314c;
 
 	.card-background-1 {
 		background-color: $dark-primary-alternate;
+	}
+	
+	.index-label {
+		color: #00E7FF;
+		background: #1D2A37;
+		border-radius: 6px;
 	}
 
 	// Components
@@ -273,6 +299,16 @@ $dark-stakes-banned-background: #3e314c;
 	}
 	.tile.tile-type-block .tile-transaction-type-block a {
 		color: #fff;
+	}
+
+	.tile-type-internal-transaction {
+		background: #13151F;
+	}
+
+	.list-card {
+		.tile.tile-type-block {
+			background-color: #13151F !important;
+		}
 	}
 
 	.item-coin-balance {
@@ -409,7 +445,6 @@ $dark-stakes-banned-background: #3e314c;
 		background-color: #191C29;
 		border-radius: 4px;
 		color: #757F8F;
-		padding: 3px 8px;
 		font-weight: 400;
     font-size: 12px;
     line-height: 150%;
@@ -433,8 +468,8 @@ $dark-stakes-banned-background: #3e314c;
 		}
 
 		&.no-hover {
-			padding: 7px 16px;
-			height: 32px;
+			// padding: 7px 16px;
+			// height: 32px;
 		}
 	}
 
@@ -562,24 +597,27 @@ $dark-stakes-banned-background: #3e314c;
 
 	// api's
 	.api-anchors-list {
-		background-color: $dark-light;
+		background-color: #0E0F16;
 	}
 	.api-doc-list-item {
 		border-bottom-color: darken($labels-dark, 30);
 	}
-	.card-subtitle,
+	.card-subtitle {
+		color: #757F8F;
+	}
+
 	.api-anchors-list-item-title,
 	.api-doc-list-item-title {
 		color: #fff;
 	}
 	.api-text-monospace {
-		color: $dark-primary;
+		color: #67F0FE;
 	}
 	.api-text-monospace-background {
-		background-color: rgba($dark-primary, .15);
+		background-color: #1D2A37;
 	}
 	.badge.badge-neutral {
-		background-color: rgba($dark-primary, .15);
+		background-color: #1D2A37;
 		color: $dark-primary;
 	}
 
@@ -951,8 +989,12 @@ $dark-stakes-banned-background: #3e314c;
 
 	// pre
 	.pre-scrollable.line-numbers, .hljs {
-		background: $dark-light;
+		background: #13151F;
 		color: #fff;
+	}
+
+	.card .card-body .tile.tile-muted.raw-input {
+		background-color: #0E0F16 !important;
 	}
 
 	.hljs-comment {

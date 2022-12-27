@@ -1,7 +1,7 @@
 <section class="container">
   <%= render BlockScoutWeb.TransactionView, "overview.html", assigns %>
 
-  <div class="card">
+  <div class="card card-2">
     <%= render BlockScoutWeb.TransactionView, "_tabs.html", assigns %>
     <div class="card-body">
       <h2 class="card-title"><%= gettext "Raw Trace" %>

@@ -108,7 +108,7 @@
               <% formatted_status = BlockScoutWeb.TransactionView.formatted_status(status) %>
               <% confirmations = confirmations(@transaction, block_height: @block_height) %>
               <span class="mr-4">
-                <span data-transaction-status="<%= formatted_status %>">
+                <span class="formatted-status" data-transaction-status="<%= formatted_status %>">
                   <%= if status == :pending do %>
                     <%= render BlockScoutWeb.FormView, "_tag.html", text: formatted_status, additional_classes: ["large"] %></span>
                   <% else %>
@@ -116,7 +116,7 @@
                   <% end %>
                 
                 <%= if confirmations > 0 do %>
-                  <span class="bs-label large ml-2 confirmations-label"><%= gettext "Confirmed by " %><span data-selector="block-confirmations"><%= confirmations %></span><%= " " <> confirmations_ds_name(confirmations) %></span>
+                  <span class="index-label ml-2"><%= gettext "Confirmed by " %><span data-selector="block-confirmations"><%= confirmations %></span><%= " " <> confirmations_ds_name(confirmations) %></span>
                 <% end %>
               </span>
             </dd>
@@ -473,7 +473,7 @@
                 </div>
                 <!-- Textarea -->
                 <div class="tx-raw-input">
-                  <div class="tile tile-muted">
+                  <div class="tile tile-muted raw-input">
                     <pre class="pre-scrollable pre-scrollable-shorty pre-wrap mb-0"><code><%= @transaction.input %></code></pre>
                   </div>
                 </div>

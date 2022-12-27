@@ -15,8 +15,8 @@
     </div>
     <div class="api-doc-list-item-controls">
       <div class="api-doc-list-item-controls-badges">
-        <span class="badge badge-success api-badge"><%= gettext "GET" %></span>
-        <span class="badge badge-neutral api-badge"><%= gettext "POST" %></span>
+        <span class="badge badge-success api-badge"><%= gettext "Get" %></span>
+        <span class="badge badge-neutral api-badge"><%= gettext "Post" %></span>
       </div>
       <span class="api-doc-list-item-controls-view-more">
         <span class="api-doc-list-item-controls-view-more-open">More Details <span class="fa fa-chevron-down"></span></span>

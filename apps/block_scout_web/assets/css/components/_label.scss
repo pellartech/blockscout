@@ -1,12 +1,8 @@
 .bs-label {
     display: inline-block;
-    padding: 0 5px;
     background: #1D2A37;
     color: #67F0FE;
     border-radius: 6px;
-    &.large {
-        font-size: 14px;
-    }
     font-weight: 400;
     font-size: 12px;
     line-height: 150%;
@@ -52,9 +48,13 @@
         margin-top: -3px;
     }
     &.success {
-        background: rgba(40, 167, 69, 0.2);
-        color: rgb(40, 167, 69);
+        background: #181F21;
+        color: #75E44E;
     }
+}
+
+.formatted-status .bs-label {
+    margin-left: unset;
 }
 
 .confirmations-label {
@@ -79,25 +79,24 @@
 
 .index-label {
     position: relative;
-    padding-right: .3rem;
-    border-top-left-radius: .25rem;
-    border-bottom-left-radius: .25rem;
-    border-top-right-radius: 0;
-    border-bottom-right-radius: 0;
+    border-radius: 6px;
     background: #f5f6fa;
     color: #77838f;
-    padding: .2rem .5rem;
+    padding: 2px 10px;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 150%;
 }
 
-.index-label:after {
-    position: absolute;
-    left: 100%;
-    top: 0;
-    content: "";
-    border-top: .8rem solid transparent;
-    border-bottom: .8rem solid transparent;
-    border-left: .8rem solid rgba(245, 246, 250, 1);
-}
+// .index-label:after {
+//     position: absolute;
+//     left: 100%;
+//     top: 0;
+//     content: "";
+//     border-top: .8rem solid transparent;
+//     border-bottom: .8rem solid transparent;
+//     border-left: .8rem solid rgba(245, 246, 250, 1);
+// }
 
 .testnet-label {
     background-color: transparent;

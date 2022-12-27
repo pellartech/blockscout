@@ -8,6 +8,10 @@ $api-doc-list-item-view-more-color: $api-doc-list-item-title-color !default;
 
 .api-text-monospace {
   color: $api-text-monospace-color;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 150%;
+  margin-bottom: 12px;
   font-family: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono",
     "Courier New", monospace;
 }
@@ -15,8 +19,9 @@ $api-doc-list-item-view-more-color: $api-doc-list-item-title-color !default;
 .api-text-monospace-background {
   background-color: $api-text-monospace-background;
   border-radius: 2px;
-  font-weight: 300;
-  padding: 5px 6px;
+  font-weight: 400;
+  padding: 4px 10px;
+  border-radius: 6px;
 }
 
 .api-anchors-list {
@@ -26,8 +31,10 @@ $api-doc-list-item-view-more-color: $api-doc-list-item-title-color !default;
   grid-auto-flow: column;
   grid-template-columns: 1fr 1fr 1fr;
   grid-template-rows: 1fr 1fr 1fr;
-  padding: 30px;
+  padding: 24px;
   row-gap: 25px;
+  margin-top: 32px;
+  border-radius: 8px;
 
   @include media-breakpoint-down(md) {
     grid-template-columns: 1fr 1fr;
@@ -54,7 +61,7 @@ $api-doc-list-item-view-more-color: $api-doc-list-item-title-color !default;
   align-self: center;
   color: #333;
   font-size: 14px;
-  font-weight: 300;
+  font-weight: 400;
   line-height: 1.2;
   margin: 0;
 }
@@ -64,6 +71,12 @@ $api-doc-list-item-view-more-color: $api-doc-list-item-title-color !default;
   font-size: 12px;
   line-height: 1.2;
   white-space: nowrap;
+
+  .api-text-monospace.api-text-monospace-background {
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 150%;
+  }
 }
 
 .api-text-title {
