@@ -712,10 +712,11 @@ $dark-stakes-banned-background: #3e314c;
 	}
 
 	.logs-search-btn {
-		color: $labels-dark;
+		color: #757F8F;
 	}
 
 	.logs-search-btn {
+		height: 32px;
 		&:hover {
 			background-color: $dark-primary;
 			color: #fff;

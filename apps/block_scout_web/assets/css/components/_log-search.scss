@@ -37,10 +37,12 @@
     display: inline-flex;
     flex-grow: 2;
     min-width: 160px;
-    font-weight: 300 !important;
+    font-weight: 400 !important;
+		height: 32px;
+		border-radius: 8px;
     &::placeholder {
-    	color: #a3a9b5;
-    	font-weight: 300 !important;
+    	color: #757F8F;
+    	font-weight: 400 !important;
     }
 }
 
@@ -63,6 +65,8 @@
 	position: absolute;
 	top: 0;
 	right: 56px;
+	height: 32px;
+	border-radius: 8px;
 	&:hover {
 		color: #333;
 	}
