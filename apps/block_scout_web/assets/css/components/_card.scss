@@ -378,6 +378,60 @@ $card-tab-icon-color-active: #fff !default;
       padding: 1px 8px;
       height: auto;
     }
+
+    .api-doc-parameters-container {
+      padding: 24px 0;
+
+      .card-title {
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 150%;
+      }
+
+      .api-doc-parameters-list {
+        .api-doc-parameters-list-title {
+          font-weight: 400;
+          font-size: 14px;
+          line-height: 150%;
+        }
+        
+        .api-doc-parameters-list-item-description {
+          strong, em {
+            font-weight: 700;
+          }
+        }
+        
+        .api-doc-parameters-list-item-subtitle {
+          font-weight: 400;
+          font-size: 12px;
+          line-height: 150%;
+          color: #757F8F;
+        }
+
+        .api-doc-parameters-list-item-title, .api-doc-parameters-list-item-description {
+          margin-bottom: 0;
+        }
+      }
+    }
+
+    .api-doc-parameters-container {
+      border-top-color: #191C29;
+    }
+    
+    .api-doc-parameters-list {
+      border-bottom-color: #191C29;
+    }
+
+    .nav-pills .nav-item a {
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 125%;
+    }
+
+    .tile.tile-muted {
+      border-radius: 8px;
+      padding: 16px;
+    }
   }
 }
 

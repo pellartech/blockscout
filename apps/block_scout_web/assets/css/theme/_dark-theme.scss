@@ -209,6 +209,16 @@ $dark-stakes-banned-background: #3e314c;
 			.api-doc-list-item-text {
 				color: #757F8F;
 			}
+
+			.tile.tile-muted {
+				background: #13151F;
+
+				pre, pre strong {
+					font-weight: 400;
+					font-size: 14px;
+					line-height: 150%;
+				}
+			}
 		}
 	}
 
