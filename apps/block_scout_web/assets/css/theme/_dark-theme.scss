@@ -373,7 +373,11 @@ $dark-stakes-banned-background: #3e314c;
 	}
 	.tile.tile-type-block {
 		border-left-color: #00E7FF;
-		border-radius: 8px;
+		// border-radius: 4px;
+		border-top-left-radius: 4px;
+		border-bottom-left-radius: 4px;
+		border-top-right-radius: 8px;
+		border-bottom-right-radius: 8px;
 		background: #0E0F16;
 	}
 	.tile.tile-type-block {
@@ -404,7 +408,7 @@ $dark-stakes-banned-background: #3e314c;
 	}
 	.tile.tile-type-block .tile-transaction-type-block {
 		background: #1D2A37;
-		border-radius: 8px 0px 0px 8px;
+		border-radius: 0;
 	}
 	.tile .progress {
 		background-color: #1D2A37;
