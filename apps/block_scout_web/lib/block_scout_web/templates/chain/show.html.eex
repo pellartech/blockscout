@@ -170,7 +170,7 @@
   <div class="card card-chain-blocks js-ad-dependant-mb-3">
     <div class="card-body">
       <div class="btn-line type-link float-right">
-        <%= link(gettext("View All Blocks"), to: blocks_path(BlockScoutWeb.Endpoint, :index), class: "") %>
+        <%= link(gettext("View all blocks"), to: blocks_path(BlockScoutWeb.Endpoint, :index), class: "") %>
         <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
           <path d="M12 12L4 4M5.33333 12H12V5.33333" stroke="#FBFBFB" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
         </svg>
@@ -235,7 +235,7 @@
   <div class="card card-chain-transactions">
     <div class="card-body">
       <div class="btn-line type-link float-right">
-        <%= link(gettext("View All Transactions"), to: transaction_path(BlockScoutWeb.Endpoint, :index), class: "") %>
+        <%= link(gettext("View all transactions"), to: transaction_path(BlockScoutWeb.Endpoint, :index), class: "") %>
         <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
           <path d="M12 12L4 4M5.33333 12H12V5.33333" stroke="#FBFBFB" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
         </svg>
