@@ -23,7 +23,14 @@
                 </div>
                 "
                 >
-                <span style="display: inline-block; height: 20px; width: 12px;" class="fontawesome-icon info-circle ml-1"></span>
+                &nbsp;
+                <span style="display: inline-block; height: 20px; width: 12px;">
+                    <svg width="20" height="21" viewBox="0 0 20 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="10" cy="10.5" r="7.5" stroke="#9CA3AF" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M9.99999 7.16667H10.0083" stroke="#9CA3AF" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M9.16666 10.5H9.99999V13.8333H10.8333" stroke="#9CA3AF" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </span>
                 </span>
             </div>
             </div>
