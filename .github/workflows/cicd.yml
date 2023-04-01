@@ -1,8 +1,8 @@
-name: Deploy to Devnet
+name: Deploy to ECR
 
 on:
   push:
-    branches: [prime]
+    branches: [prime-explorer-v5.1.2]
 
 env:
   RELEASE_REVISION: ${{ github.sha }}
@@ -64,9 +64,3 @@ jobs:
         run: |
           rm -rf /tmp/.buildx-cache
           mv /tmp/.buildx-cache-new /tmp/.buildx-cache
-      - name: Deploy to Explorer
-        uses: kodermax/kubectl-aws-eks@master
-        env:
-          RELEASE_IMAGE: ${{ steps.login-ecr.outputs.registry }}/${{ env.ECR_REPOSITORY }}:${{ env.RELEASE_REVISION }}
-        with:
-          args: set image deployments/blockscout blockscout=${{ env.RELEASE_IMAGE }} --record -n $KUBE_NAMESPACE
