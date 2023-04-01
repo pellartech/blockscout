@@ -2,7 +2,7 @@ name: Deploy to Devnet
 
 on:
   push:
-    branches: [prime]
+    branches: [prime-v5.1.2]
 
 env:
   RELEASE_REVISION: ${{ github.sha }}
