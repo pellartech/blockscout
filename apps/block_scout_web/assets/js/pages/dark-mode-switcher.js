@@ -1,12 +1,13 @@
-import $ from 'jquery'
+import Cookies from 'js-cookie'
+// @ts-ignore
+const darkModeChangerEl = document.getElementsByClassName('dark-mode-changer')[0]
 
 $('.dark-mode-changer').click(function () {
   if (localStorage.getItem('current-color-mode') === 'dark') {
     // light
     localStorage.setItem('current-color-mode', 'dark')
   } else {
-    localStorage.setItem('current-color-mode', 'dark')
+    Cookies.set('chakra-ui-color-mode', 'dark')
   }
-  // reload each theme switch
-  document.location.reload(true)
+  document.location.reload()
 })
