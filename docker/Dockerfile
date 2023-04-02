@@ -72,9 +72,9 @@ RUN mkdir -p /opt/release \
 FROM bitwalker/alpine-elixir-phoenix:1.14
 
 ARG RELEASE_VERSION
-ENV RELEASE_VERSION=${RELEASE_VERSION}
+ENV RELEASE_VERSION=5.1.2
 ARG BLOCKSCOUT_VERSION
-ENV BLOCKSCOUT_VERSION=${BLOCKSCOUT_VERSION}
+ENV BLOCKSCOUT_VERSION=5.1.2
 
 RUN apk --no-cache --update add jq
 
@@ -83,5 +83,5 @@ WORKDIR /app
 COPY --from=builder /opt/release/blockscout .
 COPY --from=builder /app/apps/explorer/node_modules ./node_modules
 COPY --from=builder /app/config/config_helper.exs ./config/config_helper.exs
-COPY --from=builder /app/config/config_helper.exs /app/releases/${RELEASE_VERSION}/config_helper.exs
+COPY --from=builder /app/releases/config/config_helper.exs /app/releases/${RELEASE_VERSION}/config_helper.exs
 
