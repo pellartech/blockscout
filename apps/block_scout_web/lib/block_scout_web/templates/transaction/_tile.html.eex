@@ -40,14 +40,14 @@
       </div>
       </span>
       <span>
-        <%= @transaction |> BlockScoutWeb.AddressView.address_partial_selector(:from, assigns[:current_address]) |> BlockScoutWeb.RenderHelpers.render_partial() %>
+        <%= @transaction |> BlockScoutWeb.AddressView.address_partial_selector(:from, assigns[:current_address]) |> BlockScoutWeb.RenderHelper.render_partial() %>
         <!-- &rarr; -->
         &nbsp;
         <svg width="16" height="8" viewBox="0 0 16 8" fill="none" xmlns="http://www.w3.org/2000/svg">
           <path d="M1 3.5C0.723858 3.5 0.5 3.72386 0.5 4C0.5 4.27614 0.723858 4.5 1 4.5V3.5ZM15.3536 4.35355C15.5488 4.15829 15.5488 3.84171 15.3536 3.64645L12.1716 0.464466C11.9763 0.269204 11.6597 0.269204 11.4645 0.464466C11.2692 0.659728 11.2692 0.976311 11.4645 1.17157L14.2929 4L11.4645 6.82843C11.2692 7.02369 11.2692 7.34027 11.4645 7.53553C11.6597 7.7308 11.9763 7.7308 12.1716 7.53553L15.3536 4.35355ZM1 4.5H15V3.5H1V4.5Z" fill="#00E7FF"/>
         </svg>
         &nbsp;
-        <%= @transaction |> BlockScoutWeb.AddressView.address_partial_selector(:to, assigns[:current_address]) |> BlockScoutWeb.RenderHelpers.render_partial() %>
+        <%= @transaction |> BlockScoutWeb.AddressView.address_partial_selector(:to, assigns[:current_address]) |> BlockScoutWeb.RenderHelper.render_partial() %>
       </span>
       <span class="d-flex flex-md-row flex-column mt-3 mt-md-0">
         <span class="tile-title">
@@ -83,7 +83,7 @@
     <!-- Block info -->
     <div class="col-md-3 col-lg-2 d-flex flex-row flex-md-column flex-nowrap justify-content-center text-md-right mt-3 mt-md-0 tile-bottom">
       <span class="mr-2 mr-md-0 order-1 block-number">
-        <%= @transaction |> block_number() |> BlockScoutWeb.RenderHelpers.render_partial() %>
+        <%= @transaction |> block_number() |> BlockScoutWeb.RenderHelper.render_partial() %>
       </span>
       <span class="mr-2 mr-md-0 order-2 days-ago" in-tile data-from-now="<%= block_timestamp(@transaction) %>"></span>
       <%= if from_or_to_address?(@transaction, assigns[:current_address]) do %>
